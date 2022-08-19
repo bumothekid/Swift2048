@@ -15,6 +15,11 @@ class GameController: UIViewController {
         configureViewComponents()
     }
     
+    // MARK: -- Views
+    
+    // MARK: -- Objective Functions
+    
+    // MARK: -- Functions
 
     func configureViewComponents() {
         view.backgroundColor = .systemBackground
