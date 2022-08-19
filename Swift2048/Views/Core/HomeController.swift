@@ -33,10 +33,16 @@ class HomeController: UIViewController {
         button.setTitleColor(UIColor.label, for: .normal)
         button.layer.cornerRadius = 5
         button.backgroundColor = .systemCyan
+        button.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         return button
     }()
     
     // MARK: -- Objective C Functions
+    
+    @objc
+    func startGame() {
+        navigationController?.pushViewController(GameController(), animated: true)
+    }
     
     // MARK: -- Functions
 
