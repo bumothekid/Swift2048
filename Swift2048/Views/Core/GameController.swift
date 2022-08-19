@@ -94,5 +94,9 @@ class GameController: UIViewController {
         view.addSubview(scoreLabel)
         scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         scoreLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 250, width: 140, height: 40)
+        
+        view.addSubview(gameView)
+        gameView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        gameView.anchor(top: scoreLabel.bottomAnchor, paddingTop: 50)
     }
 }
