@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeController.swift
 //  Swift2048
 //
 //  Created by David Riegel on 18.08.22.
