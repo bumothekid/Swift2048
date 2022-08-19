@@ -15,7 +15,25 @@ class GameController: UIViewController {
         configureViewComponents()
     }
     
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = "SCORE: \(score)"
+        }
+    }
+    
     // MARK: -- Views
+    
+    lazy var scoreLabel: UILabel = {
+        let label = UILabel()
+        label.text = "SCORE: 0"
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 6
+        label.backgroundColor = .black
+        return label
+    }()
     
     // MARK: -- Objective Functions
     
@@ -67,5 +85,9 @@ class GameController: UIViewController {
         swipeToRight.numberOfTouchesRequired = 1
         swipeToRight.direction = .right
         view.addGestureRecognizer(swipeToRight)
+        
+        view.addSubview(scoreLabel)
+        scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        scoreLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 250, width: 140, height: 40)
     }
 }
