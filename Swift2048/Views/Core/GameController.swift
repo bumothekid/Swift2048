@@ -35,6 +35,11 @@ class GameController: UIViewController {
         return label
     }()
     
+    lazy var gameView: GameView = {
+        let view = GameView()
+        return view
+    }()
+    
     // MARK: -- Objective Functions
     
     @objc
