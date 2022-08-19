@@ -15,6 +15,8 @@ class HomeController: UIViewController {
         configureViewComponents()
     }
     
+    // MARK: -- Views
+    
     lazy var logoPlaceholderLabel: UILabel = {
         let label = UILabel()
         label.text = "Swift 2048"
@@ -33,6 +35,10 @@ class HomeController: UIViewController {
         button.backgroundColor = .systemCyan
         return button
     }()
+    
+    // MARK: -- Objective C Functions
+    
+    // MARK: -- Functions
 
     func configureViewComponents() {
         view.backgroundColor = .systemBackground
